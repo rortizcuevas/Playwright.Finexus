@@ -1,0 +1,264 @@
+﻿{
+    "_documentacion":  {
+                           "proposito":  "Relaciona cada ID funcional TC-MODULO-## (atributo [Description] de la prueba) con su caso y suite en Azure DevOps Test Plans.",
+                           "caseReference":  "ID funcional del caso, tal como aparece al inicio del [Description].",
+                           "azureTestCaseId":  "ID numerico del caso en Azure (columna Test Case Id de la suite).",
+                           "suiteId":  "ID de la suite que contiene el caso (suite de la clase de pruebas).",
+                           "configurationId":  "Opcional. Si se omite o esta vacio, se usa el de AzureTestPlanSettings.json.",
+                           "nota":  "Pendiente: importar los XLSX de Grouped/ en Azure y registrar aqui los 27 casos (TC-AUTH-01, TC-DOCUMENT-01..08, TC-FIRMA-01, TC-FIRMA-DOC-01..09, TC-FIRMA-DOC-SIGN-02..09) con sus IDs reales. No incluir nombres de metodos."
+                       },
+    "azureTestPlanMapping":  [
+                                 {
+                                     "caseKey":  "TC-AUTH-01",
+                                     "caseReference":  "TC-AUTH-01",
+                                     "title":  "TC-AUTH-01: Login with valid credentials generates a token",
+                                     "azureTestCaseId":  273888,
+                                     "suiteId":  273887,
+                                     "configurationId":  "",
+                                     "contentHash":  "10a612243ff5bc29b71bbff10f31cdcfeea143410371a8cf2938a96def2392da"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-01",
+                                     "caseReference":  "TC-DOCUMENT-01",
+                                     "title":  "TC-DOCUMENT-01: Carga de PDF protegido con contrasena",
+                                     "azureTestCaseId":  273891,
+                                     "suiteId":  273890,
+                                     "configurationId":  "",
+                                     "contentHash":  "3f8969594385f60e8e4a2dd22ed359acd65c6e4d3125da60f15cb3739f7f18ad"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-02",
+                                     "caseReference":  "TC-DOCUMENT-02",
+                                     "title":  "TC-DOCUMENT-02: Carga de PDF corrupto",
+                                     "azureTestCaseId":  273892,
+                                     "suiteId":  273890,
+                                     "configurationId":  "",
+                                     "contentHash":  "b0aba778d0fba3a090b6a5c6dc204710f4741d048dd2be014c2b78f73b427692"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-03",
+                                     "caseReference":  "TC-DOCUMENT-03",
+                                     "title":  "TC-DOCUMENT-03: Carga sin ingresar archivo",
+                                     "azureTestCaseId":  273893,
+                                     "suiteId":  273890,
+                                     "configurationId":  "",
+                                     "contentHash":  "9180fce94911f34cc187b204ec83973168dde203dd8cb03b19fef295fa95bb6f"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-04",
+                                     "caseReference":  "TC-DOCUMENT-04",
+                                     "title":  "TC-DOCUMENT-04: Carga de archivo Word",
+                                     "azureTestCaseId":  273894,
+                                     "suiteId":  273890,
+                                     "configurationId":  "",
+                                     "contentHash":  "360cb2d53cc1cb73dedc45aa6cc330d5af753734f8f49d169ce4a0a79cd40b20"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-05",
+                                     "caseReference":  "TC-DOCUMENT-05",
+                                     "title":  "TC-DOCUMENT-05: Carga de archivo Excel",
+                                     "azureTestCaseId":  273895,
+                                     "suiteId":  273890,
+                                     "configurationId":  "",
+                                     "contentHash":  "a50b32dbb25952811127577d23a7ba3964fc2588fee278d2b933211b784b1645"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-06",
+                                     "caseReference":  "TC-DOCUMENT-06",
+                                     "title":  "TC-DOCUMENT-06: Carga de PDF mayor a 5 MB",
+                                     "azureTestCaseId":  273897,
+                                     "suiteId":  273896,
+                                     "configurationId":  "",
+                                     "contentHash":  "d4eb2f5764fb87cba1d68f7b6c6cd446fdfd7d76f87b85b517597b5d9b7deb79"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-07",
+                                     "caseReference":  "TC-DOCUMENT-07",
+                                     "title":  "TC-DOCUMENT-07: Carga de PDF de 10 MB",
+                                     "azureTestCaseId":  273899,
+                                     "suiteId":  273896,
+                                     "configurationId":  "",
+                                     "contentHash":  "49ed440e99fbc5d6bc90baf8b14709ea9f1c1899f536001e1062ad166b524baa"
+                                 },
+                                 {
+                                     "caseKey":  "TC-DOCUMENT-08#pdf-12-mb-supera-el-limite-de-10-mb",
+                                     "caseReference":  "TC-DOCUMENT-08",
+                                     "title":  "TC-DOCUMENT-08: Carga de PDF de 12 MB (supera el limite de 10 MB)",
+                                     "azureTestCaseId":  273898,
+                                     "suiteId":  273896,
+                                     "configurationId":  "",
+                                     "contentHash":  "de9ef14189dfdce4146b2b829b6209183399d863f0865074b0b75f067e7904fb"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-01",
+                                     "caseReference":  "TC-FIRMA-01",
+                                     "title":  "TC-FIRMA-01: Firma de archivo PDF valido",
+                                     "azureTestCaseId":  273931,
+                                     "suiteId":  273930,
+                                     "configurationId":  "",
+                                     "contentHash":  "5ebc02a8e8a31299789437d189acb64cea64203434e1b2e683cdb60df53b99c0"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-01",
+                                     "caseReference":  "TC-FIRMA-DOC-01",
+                                     "title":  "TC-FIRMA-DOC-01: 1_Autorización_Consultas (2 páginas)",
+                                     "azureTestCaseId":  273921,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "213d86927515caba3b82394b1a2b42e93b041ff569e3543e89794f43eb33af49"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-02",
+                                     "caseReference":  "TC-FIRMA-DOC-02",
+                                     "title":  "TC-FIRMA-DOC-02: 2_Solicitud_de_Crédito (4 páginas)",
+                                     "azureTestCaseId":  273922,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "6225b4f5c5bd947793e8b9c119f5215c835f3754b9aa3440c5e7ee7d4bd85a14"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-03",
+                                     "caseReference":  "TC-FIRMA-DOC-03",
+                                     "title":  "TC-FIRMA-DOC-03: 3_Conocimiento_del_Cliente (2 páginas)",
+                                     "azureTestCaseId":  273923,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "5f3cc8b72fac1a9f1cd7d0ed1b19e36c33059375546f3ec316ece64cfc27783b"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-04",
+                                     "caseReference":  "TC-FIRMA-DOC-04",
+                                     "title":  "TC-FIRMA-DOC-04: 5_Contrato_de_Mutuo (5 páginas)",
+                                     "azureTestCaseId":  273924,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "8a63be2776350f4ae10f38ef7992d425130ebeac9a39c7c55e57ab7fd149051f"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-05",
+                                     "caseReference":  "TC-FIRMA-DOC-05",
+                                     "title":  "TC-FIRMA-DOC-05: 6_Contrato_de_Fianza (2 páginas)",
+                                     "azureTestCaseId":  273925,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "c4ce71ced0e3ab6db181da580043ee4756cb29ec3294f6cb34cae292d3ec7f1b"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-06",
+                                     "caseReference":  "TC-FIRMA-DOC-06",
+                                     "title":  "TC-FIRMA-DOC-06: 7_Autorización_de_descuento (1 página)",
+                                     "azureTestCaseId":  273926,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "6fb500943639cfb4a96ddfa969d6229fd0914d3a59c674ac2b787e5ef907225a"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-07",
+                                     "caseReference":  "TC-FIRMA-DOC-07",
+                                     "title":  "TC-FIRMA-DOC-07: 11_Boletin_condiciones_finales_de_Aprobación (2 páginas)",
+                                     "azureTestCaseId":  273927,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "c164e25f4d713a308c9d64733c34fc31eee78459184409ace5948d7e64ff8bb3"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-08",
+                                     "caseReference":  "TC-FIRMA-DOC-08",
+                                     "title":  "TC-FIRMA-DOC-08: 12_Autorización_fianza_FGA (4 páginas)",
+                                     "azureTestCaseId":  273928,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "5f2c2420c533e5351b85c0c5b675f47a13619ed9999c67b841eb1d394329d487"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-09",
+                                     "caseReference":  "TC-FIRMA-DOC-09",
+                                     "title":  "TC-FIRMA-DOC-09: 13_Plan_de_pagos (8 páginas)",
+                                     "azureTestCaseId":  273929,
+                                     "suiteId":  273920,
+                                     "configurationId":  "",
+                                     "contentHash":  "edaad294ed41ef9f62132ad316e4799009c1789ea77c4cab20c06717757f33ab"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-01",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-01",
+                                     "title":  "TC-FIRMA-DOC-SIGN-01: Firma 1_Autorización_Consultas",
+                                     "azureTestCaseId":  273902,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "28022d8d675b2c4b53429e48e3a555f9136801f494706fd02c6eaad38d1e804f"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-02",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-02",
+                                     "title":  "TC-FIRMA-DOC-SIGN-02: Firma 2_Solicitud_de_Crédito",
+                                     "azureTestCaseId":  273941,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "b27891b1521fa83acc5fb0d52981b5c231b8cc24c947b529412c905d647aafde"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-03",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-03",
+                                     "title":  "TC-FIRMA-DOC-SIGN-03: Firma 3_Conocimiento_del_Cliente",
+                                     "azureTestCaseId":  273903,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "2aa09b8bcbb5f0192d099b57f792a2b823b9aa81fd9f03024976330a078cb97c"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-04",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-04",
+                                     "title":  "TC-FIRMA-DOC-SIGN-04: Firma 5_Contrato_de_Mutuo",
+                                     "azureTestCaseId":  273904,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "548ec567358f65599368a13d2ec3474be9c4c1bdc05c11122e1d987f55f632fb"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-05",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-05",
+                                     "title":  "TC-FIRMA-DOC-SIGN-05: Firma 6_Contrato_de_Fianza",
+                                     "azureTestCaseId":  273905,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "da7251a0bf57da5939fb1a578e20ce9b62650c929d81e249c83aa1428f5df5cb"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-06",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-06",
+                                     "title":  "TC-FIRMA-DOC-SIGN-06: Firma 7_Autorización_de_descuento",
+                                     "azureTestCaseId":  273906,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "d664cced311e0cd5b733a5274f8e49b8a9cb4db26ea2ae8915f4a67cad5414ac"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-07",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-07",
+                                     "title":  "TC-FIRMA-DOC-SIGN-07: Firma 11_Boletin_condiciones_finales_de_Aprobación",
+                                     "azureTestCaseId":  273907,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "38415848af87da157f1fd24fd01d65084003150e1a529e2d4c377d76f5a0d1f5"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-08",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-08",
+                                     "title":  "TC-FIRMA-DOC-SIGN-08: Firma 12_Autorización_fianza_FGA",
+                                     "azureTestCaseId":  273908,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "99556098136a68b14ef40da1e5fc3cbf5b1a83ef8f0c252bc50fe6daf46037a1"
+                                 },
+                                 {
+                                     "caseKey":  "TC-FIRMA-DOC-SIGN-09",
+                                     "caseReference":  "TC-FIRMA-DOC-SIGN-09",
+                                     "title":  "TC-FIRMA-DOC-SIGN-09: Firma 13_Plan_de_pagos",
+                                     "azureTestCaseId":  273919,
+                                     "suiteId":  273901,
+                                     "configurationId":  "",
+                                     "contentHash":  "b518079007fd5183c273e24c72f02c27f3ea9ca8d0f78c1d9fa6be37841350cb"
+                                 }
+                             ]
+}

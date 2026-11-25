@@ -1,0 +1,65 @@
+﻿{
+    "_documentacion":  {
+                           "proposito":  "Configuracion unica de Azure DevOps Test Plans para los scripts de esta carpeta. Los parametros de cada script tienen prioridad sobre este archivo.",
+                           "testPlanId":  "ID numerico del plan de Finexus (parametro planId de la URL de Test Plans). Valor actual: 273777.",
+                           "discovery":  "Descubrimiento automatico y recursivo de la carpeta Tests. testsPath vacio = autodeteccion.",
+                           "suites":  "Lo rellena el script: ruta relativa de carpeta/archivo -\u003e ID de suite. No editar manualmente.",
+                           "testCase":  "areaPath, iterationPath, assignedTo (correo) y state de los casos importados. Ajustar areaPath e iterationPath al proyecto Finexus en Azure.",
+                           "secretos":  "No guardar aqui el token de acceso personal."
+                       },
+    "organization":  "olimpiait",
+    "project":  "Olimpia Agil",
+    "testPlan":  "Test plan Automatización Finexus",
+    "testPlanId":  "273777",
+    "runNamePrefix":  "Test plan Automatizaci\u00F3n Finexus",
+    "configurationId":  36,
+    "discovery":  {
+                      "testsPath":  "",
+                      "includeRootFolder":  false,
+                      "testAttributes":  [
+                                             "TestMethod",
+                                             "DataTestMethod",
+                                             "Test",
+                                             "TestCase",
+                                             "Fact",
+                                             "Theory"
+                                         ],
+                      "titleAttributes":  [
+                                              "Description",
+                                              "DisplayName"
+                                          ],
+                      "idPattern":  "^(?\u003cid\u003eTC-[A-Z0-9]+(?:-[A-Z0-9]+)*-\\d+)\\b",
+                      "stepPatterns":  [
+                                           "ExtentStepAsync\\(\"(?\u003cstep\u003e[^\"]+)\"",
+                                           "//\\s*(?\u003cstep\u003eArrange|Act|Assert)\\b"
+                                       ],
+                      "excludeFolders":  [
+                                             "bin",
+                                             "obj"
+                                         ],
+                      "includeIgnored":  false,
+                      "dataRowMode":  "perRow",
+                      "requireDataRowDisplayName":  true
+                  },
+    "testCase":  {
+                     "areaPath":  "Olimpia Agil\\Otros\\Transversal 2025",
+                     "iterationPath":  "Olimpia Agil\\Transversal\\SprintTransversal",
+                     "assignedTo":  "rortiz@olimpiait.com",
+                     "state":  "Design",
+                     "tags":  [
+                                  "Automatizado"
+                              ]
+                 },
+    "suites":  {
+                   "Api":  273885,
+                   "Api/Auth":  273886,
+                   "Api/Auth/AuthLoginTests":  273887,
+                   "Api/Document":  273889,
+                   "Api/Document/DocumentIssueInvalidFileTests":  273890,
+                   "Api/Document/DocumentIssueLargeFileTests":  273896,
+                   "E2E":  273900,
+                   "E2E/SigningAllDocumentsE2ETests":  273901,
+                   "E2E/SigningDocumentsDisplayTests":  273920,
+                   "E2E/SigningPdfValidE2ETests":  273930
+               }
+}

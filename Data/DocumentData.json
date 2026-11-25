@@ -1,0 +1,18 @@
+{
+  "_comentario": "Datos de prueba para el modulo Document (casos negativos de emision).",
+  "issuePasswordProtectedPdf": [
+    { "tipoIdentificacion": "CC", "identificacion": "1234567890", "nombre": "Rodrigo", "segundoNombre": "", "apellido": "Ortiz", "segundoApellido": "Cuevas", "correoElectronico": "rtestrprueba@gmail.com", "telefono": "3125257159", "fileName": "no_permitidos/pdf_protegido_por_contraseña.pdf" }
+  ],
+  "issueCorruptPdf": [
+    { "tipoIdentificacion": "CC", "identificacion": "1234567890", "nombre": "Rodrigo", "segundoNombre": "", "apellido": "Ortiz", "segundoApellido": "Cuevas", "correoElectronico": "rtestrprueba@gmail.com", "telefono": "3125257159", "fileName": "no_permitidos/1_Autorización_Consultas_fallido.pdf", "truncateBase64Percent": 50 }
+  ],
+  "issueNoFile": [
+    { "tipoIdentificacion": "CC", "identificacion": "1234567890", "nombre": "Rodrigo", "segundoNombre": "", "apellido": "Ortiz", "segundoApellido": "Cuevas", "correoElectronico": "rtestrprueba@gmail.com", "telefono": "3125257159", "fileName": "" }
+  ],
+  "issueWord": [
+    { "tipoIdentificacion": "CC", "identificacion": "1234567890", "nombre": "Rodrigo", "segundoNombre": "", "apellido": "Ortiz", "segundoApellido": "Cuevas", "correoElectronico": "rtestrprueba@gmail.com", "telefono": "3125257159", "fileName": "no_permitidos/Test_word.docx" }
+  ],
+  "issueExcel": [
+    { "tipoIdentificacion": "CC", "identificacion": "1234567890", "nombre": "Rodrigo", "segundoNombre": "", "apellido": "Ortiz", "segundoApellido": "Cuevas", "correoElectronico": "rtestrprueba@gmail.com", "telefono": "3125257159", "fileName": "no_permitidos/Test_excel.xlsx" }
+  ]
+}

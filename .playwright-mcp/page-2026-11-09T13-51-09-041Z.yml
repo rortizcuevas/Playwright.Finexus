@@ -1,0 +1,13 @@
+- generic [ref=e3]:
+  - banner [ref=e5]:
+    - navigation [ref=e8]
+    - generic [ref=e12]:
+      - generic:
+        - generic:
+          - list
+  - main [ref=e13]:
+    - generic [ref=e16]:
+      - heading "Procesando datos" [level=1] [ref=e17]
+      - paragraph [ref=e18]: Estamos procesando tu información.
+      - img "No disponible" [ref=e22]
+  - contentinfo [ref=e24]

@@ -1,0 +1,16 @@
+{
+  "_comentario": "Datos de prueba para el modulo Signing.",
+  "signPdfValid": [
+    {
+      "tipoIdentificacion": "CC",
+      "identificacion": "1234567890",
+      "nombre": "Rodrigo",
+      "segundoNombre": "",
+      "apellido": "Ortiz",
+      "segundoApellido": "Cuevas",
+      "correoElectronico": "rtestrprueba@gmail.com",
+      "telefono": "3125257159",
+      "fileName": "1_Autorización_Consultas.pdf"
+    }
+  ]
+}

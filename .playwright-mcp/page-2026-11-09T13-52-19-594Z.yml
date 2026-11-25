@@ -1,0 +1,134 @@
+- generic [ref=e3]:
+  - banner [ref=e5]:
+    - navigation [ref=e8]:
+      - img "No disponible" [ref=e26]
+    - list [ref=e29]:
+      - listitem [ref=e30]
+      - listitem [ref=e48]
+      - listitem [ref=e32]
+      - listitem [ref=e33]
+      - listitem [ref=e34]
+  - main [ref=e13]:
+    - generic [ref=e50]:
+      - heading "OKey documentos" [level=1] [ref=e51]
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - checkbox [checked]
+          - generic [ref=e54] [cursor=pointer]
+        - generic [ref=e55]: Desmarcar todos los documentos
+      - main [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: Mis documentos
+            - generic [ref=e61]: "1"
+          - generic [ref=e63] [cursor=pointer]:
+            - img [ref=e65]:
+              - generic [ref=e67]: PDF
+            - heading "1-autorizacion-consultas.pdf" [level=4] [ref=e69]
+            - generic [ref=e70]: ✓
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - heading "1-autorizacion-consultas.pdf" [level=2] [ref=e74]
+            - generic [ref=e75]:
+              - button "Anterior documento" [disabled] [ref=e76] [cursor=pointer]
+              - generic [ref=e79]: 1/1
+              - button "Siguiente documento" [disabled] [ref=e80] [cursor=pointer]
+          - generic [ref=e85]:
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - generic "Toggle Sidebar" [ref=e98]:
+                  - button "Toggle Sidebar" [expanded] [ref=e99] [cursor=pointer]
+                - generic:
+                  - generic "Find in Document"
+                - generic [ref=e102]:
+                  - generic [ref=e103]:
+                    - generic "First page" [ref=e105]:
+                      - button "Go to First Page" [disabled] [ref=e106] [cursor=pointer]
+                    - generic "Previous Page" [ref=e110]:
+                      - button "Previous Page" [disabled] [ref=e111] [cursor=pointer]
+                  - generic [ref=e114]:
+                    - spinbutton "Page" [ref=e116]: "0"
+                    - generic [ref=e117]: of ⁨0⁩
+                  - generic [ref=e118]:
+                    - generic "Next Page" [ref=e120]:
+                      - button "Next Page" [disabled] [ref=e121] [cursor=pointer]
+                    - generic "Last page" [ref=e125]:
+                      - button "Go to Last Page" [disabled] [ref=e126] [cursor=pointer]
+              - generic [ref=e129]:
+                - generic:
+                  - generic "Zoom Out" [ref=e131]:
+                    - button "Zoom Out" [ref=e132] [cursor=pointer]
+                  - generic "Zoom In" [ref=e136]:
+                    - button "Zoom In" [ref=e137] [cursor=pointer]
+                  - combobox "Zoom" [ref=e142] [cursor=pointer]:
+                    - option "Automatic Zoom"
+                    - option "Actual Size"
+                    - option "Page Fit"
+                    - option "Page Width" [selected]
+                    - option "⁨50⁩%"
+                    - option "⁨100⁩%"
+                    - option "⁨125⁩%"
+                    - option "⁨150⁩%"
+                    - option "⁨200⁩%"
+                    - option "⁨300⁩%"
+                    - option "⁨400⁩%"
+              - generic:
+                - generic:
+                  - generic "Document Properties…"
+                - generic:
+                  - generic "Do not join page spreads"
+                - generic:
+                  - generic "Join page spreads starting with odd-numbered pages"
+                - generic:
+                  - generic "Join page spreads starting with even-numbered pages"
+                - generic:
+                  - generic "Use Page Scrolling"
+                - generic:
+                  - generic "Use Vertical Scrolling"
+                - generic:
+                  - generic "Use Horizontal Scrolling"
+                - generic:
+                  - generic "Wrapped Scrolling"
+                - generic:
+                  - generic "Infinite scroll"
+                - generic:
+                  - generic "Book mode"
+                - generic:
+                  - generic "Enable hand tool"
+                - generic:
+                  - generic "Enable text selection tool"
+                - generic:
+                  - generic "Rotate Clockwise"
+                - generic:
+                  - generic "Rotate Counterclockwise"
+                - generic:
+                  - generic "Switch to Presentation Mode"
+                - generic:
+                  - generic "Open File"
+                - generic:
+                  - generic "Print"
+                - generic:
+                  - generic "Download"
+                - generic:
+                  - generic "Move Page Down"
+                - generic:
+                  - generic "Move Page Up"
+                - generic:
+                  - radiogroup:
+                    - generic:
+                      - radio "Comment"
+                    - generic:
+                      - radio "Signature"
+                    - generic:
+                      - radio "Highlight"
+                    - generic:
+                      - radio "Draw"
+                    - generic:
+                      - radio "Text"
+                    - generic:
+                      - radio "Draw"
+            - generic [ref=e144]: No se pudo cargar el PDF. Verifica la URL. Failed to fetch
+  - contentinfo [ref=e24]:
+    - generic [ref=e46]:
+      - button "Volver" [ref=e146] [cursor=pointer]
+      - button "Continuar" [active] [ref=e47] [cursor=pointer]
