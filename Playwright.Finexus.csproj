@@ -44,9 +44,6 @@
 	<None Update="playwright.runsettings.example">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
-	<None Update="playwright.runsettings">
-	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	</None>
 	<None Update="Data\SigningData.json">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
