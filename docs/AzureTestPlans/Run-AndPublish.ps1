@@ -54,4 +54,6 @@ if (-not $Publish) {
 	exit $testExit
 }
 & (Join-Path $scriptDir 'Publish-AzureTestPlan.ps1') -TrxPath $trx -AssemblyPath $assembly -CasePrefix $CasePrefix
-exit $LASTEXITCODE
+$publishExit = $LASTEXITCODE
+if ($publishExit -ne 0) { exit $publishExit }
+exit $testExit

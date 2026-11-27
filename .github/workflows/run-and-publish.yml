@@ -1,0 +1,91 @@
+name: Run and publish Azure Test Plans
+
+on:
+  push:
+    branches:
+      - Prueba_pipeline
+
+permissions:
+  contents: read
+
+concurrency:
+  group: finexus-test-plan
+  cancel-in-progress: false
+
+jobs:
+  run-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Preparar configuracion de pruebas
+        shell: pwsh
+        env:
+          FINEXUS_WEB_API_URL: ${{ secrets.FINEXUS_WEB_API_URL }}
+          FINEXUS_WEB_APP_URL: ${{ secrets.FINEXUS_WEB_APP_URL }}
+          FINEXUS_API_USER: ${{ secrets.FINEXUS_API_USER }}
+          FINEXUS_API_PASSWORD: ${{ secrets.FINEXUS_API_PASSWORD }}
+          FINEXUS_API_CLIENT_CODE: ${{ secrets.FINEXUS_API_CLIENT_CODE }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+        run: |
+          $required = @(
+            'FINEXUS_WEB_API_URL', 'FINEXUS_WEB_APP_URL', 'FINEXUS_API_USER',
+            'FINEXUS_API_PASSWORD', 'FINEXUS_API_CLIENT_CODE', 'MAIL_USER',
+            'MAIL_PASSWORD', 'AZURE_DEVOPS_PAT'
+          )
+          $missing = @($required | Where-Object { [string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($_)) })
+          if ($missing.Count) { throw "Faltan secretos de Actions: $($missing -join ', ')" }
+
+          [xml]$settings = Get-Content playwright.runsettings.example -Raw -Encoding UTF8
+          $values = @{
+            webApiUrl = $env:FINEXUS_WEB_API_URL
+            webAppUrl = $env:FINEXUS_WEB_APP_URL
+            apiUser = $env:FINEXUS_API_USER
+            apiClientCode = $env:FINEXUS_API_CLIENT_CODE
+            headless = 'true'
+          }
+          foreach ($name in $values.Keys) {
+            $parameter = $settings.SelectSingleNode("//TestRunParameters/Parameter[@name='$name']")
+            if (-not $parameter) { throw "Falta el parametro $name en playwright.runsettings.example." }
+            $parameter.SetAttribute('value', $values[$name])
+          }
+          $settings.Save((Join-Path $env:GITHUB_WORKSPACE 'playwright.runsettings'))
+
+      - name: Compilar e instalar Chromium
+        shell: pwsh
+        run: |
+          dotnet build Playwright.Finexus.csproj -c Release
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          dotnet build docs/AzureTestPlans/TestMetadataExtractor -o docs/AzureTestPlans/output/extractor
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./bin/Release/net9.0/playwright.ps1 install --with-deps chromium
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Ejecutar y publicar
+        shell: pwsh
+        env:
+          FINEXUS_API_PASSWORD: ${{ secrets.FINEXUS_API_PASSWORD }}
+          Mail__User: ${{ secrets.MAIL_USER }}
+          Mail__Password: ${{ secrets.MAIL_PASSWORD }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+        run: |
+          ./docs/AzureTestPlans/Run-AndPublish.ps1 -Configuration Release -Publish
+          exit $LASTEXITCODE
+
+      - name: Guardar resultados y registro de publicacion
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultados-azure-test-plans
+          path: |
+            docs/AzureTestPlans/output/trx/*.trx
+            docs/AzureTestPlans/output/publication-*.json
+          if-no-files-found: ignore
+          retention-days: 7

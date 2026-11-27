@@ -24,7 +24,7 @@ Tambien desde el Test Explorer de Visual Studio.
 
 Parametros: `-Filter` (lista; se une como `FullyQualifiedName~x|y`; sin filtro ejecuta todo), `-CasePrefix` (limita el alcance por prefijo de ID), `-Configuration` (Debug por defecto), `-Publish`.
 
-Pasos: compila, valida el mapeo, genera un runsettings temporal con `captureStepEvidence=true`, ejecuta `dotnet test --no-build` generando `output/trx/run-<fecha>.trx`, y solo con `-Publish` llama a Publish-AzureTestPlan.ps1. El codigo de salida es el de `dotnet test`.
+Pasos: compila, valida el mapeo, genera un runsettings temporal con `captureStepEvidence=true`, ejecuta `dotnet test --no-build` generando `output/trx/run-<fecha>.trx`, y solo con `-Publish` llama a Publish-AzureTestPlan.ps1. Si la publicacion falla, devuelve su codigo de error; en otro caso devuelve el codigo de `dotnet test`.
 
 ```powershell
 .\Run-AndPublish.ps1
