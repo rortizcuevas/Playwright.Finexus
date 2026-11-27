@@ -16,4 +16,3 @@
     <Parameter name="maxEvidenceMbPerTest" value="5" />
   </TestRunParameters>
 </RunSettings>
-
